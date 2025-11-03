@@ -5,6 +5,13 @@
   --preto: #222222;
   --marrom: #6b4f3b;
   --vermelho: #e04646;
+  --azul: #1D4999;
+  --laranja: #BE5108;
+}
+
+a{
+  text-decoration: none;
+  color: #0000;
 }
 
 /* Reset / base */
@@ -23,13 +30,109 @@ header.corsec{
 .logo{height:56px;width:56px;margin-right:12px}
 .corsecPages{color:var(--marrom);font-size:22px;font-weight:700;margin-right:auto}
 
+.janRedSenha{
+    margin:auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 5%;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 25px #0003;
+    position: relative;
+    color: rgb(77, 77, 77);
+    background-color: rgb(255, 255, 255);   
+}
+
+.formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* espaço entre input e botão */
+}
+
+.formulario input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.esqueciMeta {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 10px;
+    padding-top: 8px;
+    border-top: 1px dashed #eee;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+.linha-ou {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0; /* espaçamento acima e abaixo */
+}
+
+.linha-ou::before,
+.linha-ou::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid rgb(211, 211, 211); /* cor da linha */
+}
+.redesLogin{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.redesLogin img{
+    height: 30px;
+    width: 30px;
+    align-items: center;
+}
+
+.redesLogin button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgb(252, 252, 252);
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.botaoEnviar{
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(182, 182, 182);
+    color: rgb(255,255,255);
+    border: 1px solid rgb(41, 41, 41);
+    margin: 10px 8px 8px 10px;
+    padding: 0.25rem 0.75rem;
+    justify-content: center;
+    border-radius: 4px;
+}
 .botaoSair{
   color:var(--marrom);
   font-weight:600;
-  margin-left: 1175%;
+  margin-left: 800%;
 }
 
-/* Navegação */
 .menu-horizontal2 ul{
   display:flex;
   gap:10px;
@@ -42,7 +145,7 @@ header.corsec{
 .menu-horizontal2 a{padding:10px 16px;border-radius:8px;color:var(--marrom);font-weight:600}
 .menu-horizontal2 a.ativo{background:var(--marrom);color:var(--branco)}
 
-/* Hero */
+
 .hero{
   background: url('img/caramelo2.jpg') center/cover no-repeat;
   padding:80px 6%;
@@ -51,13 +154,19 @@ header.corsec{
   position:relative;
   overflow:hidden;
 }
+
+.titulo {
+    margin-top: 1.5%;
+    margin-bottom: 20px; /* adiciona espaço abaixo do h2 */
+    text-align: center;
+}
+
 .hero::after{content:"";position:absolute;inset:0;background:rgba(11,7,4,0.25)}
 .hero-content{position:relative;z-index:1;color:var(--branco);max-width:780px}
 .titulo-hero{font-size:2rem;margin-bottom:12px}
 .sub-hero{font-size:1.05rem;margin-bottom:18px}
 .btn-destaque{display:inline-block;background:var(--vermelho);color:var(--branco);padding:12px 22px;border-radius:24px;border:none;font-weight:700}
 
-/* Pets grid */
 .pets, .adote{padding:40px 6%}
 .corsecProd{color:var(--marrom);margin-bottom:18px;font-size:1.5rem;font-weight:700}
 
@@ -67,7 +176,6 @@ header.corsec{
   gap:22px;
 }
 
-/* Card padronizado (mesma linha de raciocínio dos seus arquivos) */
 .pet-card{
   background:var(--branco);
   border-radius:12px;
@@ -84,7 +192,6 @@ header.corsec{
 .pet-card h3{color:var(--marrom);margin-bottom:6px}
 .pet-card p{color:#6b6b6b;margin-bottom:12px}
 
-/* botão match (aproveitando nomes já usados) */
 .btn-match{
   background:var(--vermelho);
   color:var(--branco);
@@ -107,11 +214,10 @@ header.corsec{
 }
 .notification.show{right:30px;opacity:1}
 
-/* Form / filtros (estilo semelhante ao seu) */
+
 .janRedSenha{background:var(--branco);padding:28px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
 .filtros select{padding:10px 14px;border-radius:20px;border:1px solid #e6d7c8;background:transparent;font-weight:600}
 
-/* Rodapé */
 footer{margin-top:36px}
 .rodapes{display:flex;justify-content:space-between;gap:20px;max-width:1100px;margin:0 auto;padding:22px 6%}
 .rodapes h4{color:var(--marrom);margin-bottom:8px}
