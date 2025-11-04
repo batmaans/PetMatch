@@ -261,6 +261,24 @@ p.Dashboard{
   margin: auto;
 }
 
+.quemSomos{
+  padding: 10px 20px;
+  text-align: center;
+}
+
+img.quemSomos{
+  width: 100%;
+  border-radius: 50px;
+}
+
+.MVV {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
 .caixaMenuColab{
   display: flex;
   flex-direction: column;

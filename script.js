@@ -40,3 +40,4 @@ function showNotification(message) {
     setTimeout(() => notif.remove(), 420);
   }, 3000);
 }
+
