@@ -30,7 +30,20 @@ header.corsec{
   background-color:#FDFAF6;
 }
 .logo{height:56px;width:56px;margin-right:12px}
-.corsecPages{color:var(--marrom);font-size:22px;font-weight:700;margin-right:auto}
+.corsecPages{
+  color:var(--marrom);
+  font-size:22px;
+  font-weight:700;
+  margin-right:auto;
+}
+
+.corsecTitulo{
+  color:var(--marrom);
+  font-size:28px;
+  font-weight:700;
+  text-align:center;
+  padding: 10px 0px 0px 0px;
+}
 
 .janRedSenha{
     margin:auto;
@@ -150,6 +163,11 @@ header.corsec{
   color:var(--marrom);
   font-weight:600;
   margin-left: 1500%;
+}
+.botaoSair2{
+  color:var(--marrom);
+  font-weight:600;
+  margin-left: 2200%;
 }
 
 .menu-horizontal2 ul{
@@ -276,5 +294,5 @@ footer{margin-top:36px}
   margin: 18px 0px 18px 0px;
   padding: 20px;
   margin-bottom: 0px;
-  font-weight: bold;  
+  font-weight: bold;
 }
