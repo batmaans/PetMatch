@@ -11,18 +11,18 @@
   --cinza: #666666;
 }
 
-
-
-/* Reset / base */
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Roboto', sans-serif}
-html,body{background:var(--bege);color:var(--preto);-webkit-font-smoothing:antialiased}
+html,body{
+  background:var(--bege);
+  color:var(--preto);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing:antialiased}
 
 a{
    color: #000;
    text-decoration:none;
 }
 
-/* Header */
 header.corsec{
   height:80px;
   display:flex;
@@ -146,14 +146,14 @@ header.corsec{
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 20px 0; /* espaçamento acima e abaixo */
+  margin: 20px 0;
 }
 
 .linha-ou::before,
 .linha-ou::after {
   content: "";
   flex: 1;
-  border-bottom: 1px solid rgb(211, 211, 211); /* cor da linha */
+  border-bottom: 1px solid rgb(211, 211, 211);
 }
 .redesLogin{
     display: flex;
@@ -205,8 +205,8 @@ header.corsec{
     margin-top: 6%;
     background-size: cover;
     background-position: center;
-    opacity: 0.2; /* Ajuste a opacidade conforme necessário */
-}
+    opacity: 0.2;
+  }
 
 .espacamentoLeve{
     margin-bottom: 15px;
@@ -445,7 +445,7 @@ h3.caixaMenuColabTitulo{
   100%{transform:scale(1)}
 }
 
-/* Notificação */
+/* notificação */
 .notification{
   position:fixed;right:-360px;bottom:30px;background:var(--vermelho);color:var(--branco);
   padding:12px 20px;border-radius:28px;box-shadow:0 8px 22px rgba(0,0,0,0.2);opacity:0;transition:all .4s ease;z-index:9999;

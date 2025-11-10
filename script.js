@@ -1,7 +1,6 @@
 // script.js - funcionalidades comuns (match, notificações e pequenos comportamentos)
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Delegation: trata botões .btn-match que podem existir em várias páginas
   document.body.addEventListener('click', (e) => {
     if (e.target && e.target.classList.contains('btn-match')) {
       const button = e.target;
