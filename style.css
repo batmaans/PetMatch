@@ -47,6 +47,10 @@ header.corsec{
 }
 
 .janRedSenha{
+    background:var(--branco);
+    padding:28px;
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
     margin:auto;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -71,6 +75,39 @@ header.corsec{
 }
 
 .formulario input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formulario2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* espaço entre input e botão */
+}
+
+.formulario2 input,
+.formulario2 textarea{
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* espaço entre input e botão */
+}
+
+.formulario2 input {
     width: 100%;
     height: 40px;
     padding: 8px 12px;
@@ -279,6 +316,12 @@ img.quemSomos{
   padding: 40px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
+
+.MVV p{
+  margin-top: 2.5%;
+  font-weight: bold;
+  font-size: 90%;
+}
 .caixaMenuColab{
   display: flex;
   flex-direction: column;
@@ -300,45 +343,66 @@ h3.caixaMenuColabTitulo{
   align-items: center;
 }
 
-.hero{
-  background: url('img/caramelo2.jpg') center/cover no-repeat;
-  padding:80px 6%;
-  position:relative;
-  overflow: hidden;
-  width: 100%;
-}
 
 .titulo {
-    margin-top: 1.5%;
-    margin-bottom: 20px; /* adiciona espaço abaixo do h2 */
-    text-align: center;
+  margin-top: 1.5%;
+  margin-bottom: 20px; /* espaço abaixo do h2 */
+  text-align: center;
 }
 
-.hero::after{
-  content:"";
-  position:absolute;
-  inset: 0;
-  background:rgba(11,7,4,0.25)}
-.hero-conteudo{
-  inset: 0;
-  position:relative;
-  z-index:1;
-  color:var(--branco);
-  max-width:780px;
-  align-items: center;
-  text-align:center;
+.hero {
+  background: url('img/caramelo2.jpg') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  text-align: center;
 }
-.titulo-hero{font-size:2rem;margin-bottom:12px}
-.sub-hero{font-size:1.05rem;margin-bottom:18px}
 
-.btn-destaque{
-  display:inline-block;
-  background:var(--vermelho);
-  color:var(--branco);
-  padding:12px 22px;
-  border-radius:24px;
-  border:none;
-  font-weight:700;
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 7, 4, 0.35); 
+}
+
+.hero-conteudo {
+  position: relative;
+  z-index: 1;
+  color: var(--branco);
+  max-width: 700px;
+  padding: 20px;
+}
+
+.titulo-hero {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.sub-hero {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  color: #f8f8f8;
+}
+
+.btn-destaque {
+  background: var(--vermelho);
+  color: var(--branco);
+  padding: 14px 28px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-destaque:hover {
+  transform: scale(1.05);
+  background: #ff7575;
 }
 
 .pets, .adote{padding:40px 6%}
@@ -389,7 +453,18 @@ h3.caixaMenuColabTitulo{
 .notification.show{right:30px;opacity:1}
 
 
-.janRedSenha{background:var(--branco);padding:28px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.janRedSenha2{
+  background:var(--branco);
+  padding:28px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06)
+}
+
+.janRedSenha2 p{
+  padding: 5px 5px 5px px;
+  font-weight: bold;
+}
+
 .filtros select{padding:10px 14px;border-radius:20px;border:1px solid #e6d7c8;background:transparent;font-weight:600}
 
 footer{margin-top:36px}
@@ -435,13 +510,13 @@ footer{margin-top:36px}
 }
 
 .bloco-ajuda h2 {
-  color: #ff6b6b;
+  color: #BE5108;
   margin-bottom: 10px;
 }
 
 .destaque-ajuda {
   background: linear-gradient(135deg, #fff5f5, #fff);
-  border-left: 5px solid #ff6b6b;
+  border-left: 5px solid #BE5108;
 }
 
 .faq-item {
@@ -462,8 +537,9 @@ footer{margin-top:36px}
 
 .botaoEnviar {
   display: inline-block;
-  background-color: #ff6b6b;
+  background-color: #e04646;
   color: #fff;
+  font-weight: bold;
   padding: 10px 18px;
   border-radius: 8px;
   text-decoration: none;
@@ -471,5 +547,6 @@ footer{margin-top:36px}
 }
 
 .botaoEnviar:hover {
-  background-color: #ff8585;
+  background-color: #1D4999;
 }
+
