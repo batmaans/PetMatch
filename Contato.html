@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Faça seu Cadastro | PetMatch</title>
+  <title>Quem Somos | PetMatch</title>
 
   <link rel="stylesheet" href="style.css" />
   <script defer src="adote.js"></script>
@@ -21,38 +21,39 @@
       <li><a href="index.html">Início</a></li>
       <li><a href="adote.html">Adote</a></li>
       <li><a href="quemSomos.html">Quem Somos</a></li>
-      <li><a href="Contato.html">Contato</a></li>
+      <li><a href="Contato.html" class="ativo">Contato</a></li>
       <li><a href="Ajuda.html">Ajuda</a></li>
     </ul>
   </nav>
 
-  <section class="cadastro">
-    <div class="linha-ou"></div>
-    <h2 class="corsecTitulo">Faça seu cadastro, e seja bem vindo! ❤️</h2>
-    
+<section class="quemSomos">
+    <div class="MVV">
+      <h2>Fale com a gente 💌</h2>
+      <p>Quer adotar, ser voluntário ou tirar dúvidas? A PetMatch adora conversar com você! Preencha o formulário ou escolha uma das opções abaixo.</p>
       <div class="janRedSenha" style="width: 40%;">
-          <h2 class="corsecTitulo" style="margin-bottom: 25px;">Au au? Miau? </h2>
             <form class="formulario" action="cadastrar" method="post">
-                <input type="text" id="nome" name="nome" placeholder="Nome" required>
-
-                <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
-
-                <input type="text" id="CPF" name="CPF" placeholder="CPF" required>
-
-                <input type="date" id="data_nascimento" name="data_nascimento" placeholder="Data de Nascimento" required>
-
-                <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+                <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
 
                 <input type="email" id="email" name="email" placeholder="E-mail" required>
 
-                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                <input type="tel" id="telefone" name="telefone" placeholder="Telefone (opcional)">
                 
-                <input type="password" id="senha" name="senha" placeholder="Repita a Senha" required>
+                <input type="text" id="assunto" name="assunto" placeholder="Assunto (ex: 'Quero adotar', 'Quero ser voluntário', 'Doações'.)" required>
 
+                <input type="text" textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                
                 <input class="botaoEnviar" type="submit" value="CADASTRAR">
             </form>
       </div>
+      
+
+      <h2>Contato Direto</h2>
+      <p>📍 Avenida Caramelo, 1599 - Vila Cachorrada - Presidente Prudente / SP</p>
+      <p>📞 Telefone / WhatsApp (18) 99999-9999</p>
+      <p>✉️ Email: contato@petmatch.com</p>
+      <p>⏰ Horário de atendimento: Segunda a sábado, das 9h as 17h.</p>
   </section>
+
 
   <footer>
     <section class="rodapes">
