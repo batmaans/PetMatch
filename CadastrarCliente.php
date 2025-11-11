@@ -32,7 +32,7 @@
     
       <div class="janRedSenha" style="width: 40%;">
           <h2 class="corsecTitulo" style="margin-bottom: 25px;">Au au? Miau? </h2>
-            <form class="formulario" action="cadastrar" method="post">
+            <form class="formulario" action="processamento.php" method="post"> 
                 <input type="text" id="nome" name="nome" placeholder="Nome" required>
 
                 <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
