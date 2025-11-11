@@ -47,9 +47,9 @@
 
                 <input type="password" id="senha" name="senha" placeholder="Senha" required>
 
-                <input type="password" id="cargo" name="cargo" placeholder="Cargo" required>
+                <input type="cargo" id="cargo" name="cargo" placeholder="Cargo" required>
                 
-                <input type="password" id="salario" name="salario" placeholder="Salario" required>
+                <input type="salario" id="salario" name="salario" placeholder="Salario" required>
 
                 <input class="botaoEnviar" type="submit" value="CADASTRAR">
             </form>
