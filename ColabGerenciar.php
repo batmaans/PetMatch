@@ -39,17 +39,17 @@
   <section class="GerenciarPets">
     <h2 class="corsecTitulo">Área do Colaborador</h2><br>
     <div class="dashboardCaixas">
-      <article class="caixaMenuColab">
+      <a href="ColabGerenciarPets.php" article class="caixaMenuColab">
         <h3 class="caixaMenuColabTitulo">Gerenciar Pets</h3>
         <p class="Dashboard">Você pode adicionar, editar ou finalizar uma doação.</p>
         <button class="btn-destaque">Ir para area</button>
-      </article>
+      </article></a>
 
-      <article class="caixaMenuColab">
+      <a href="ColabGerenciarClientes.php" article class="caixaMenuColab">
         <h3 class="caixaMenuColabTitulo">Gerenciar Clientes</h3>
         <p class="Dashboard">Veja, cadastre, modifique ou exclua os dados dos clientes.</p>
         <button class="btn-destaque">Ir para area</button>
-      </article>
+      </article></a>
 
       <a href="ColabGerenciarDoadores.php" article class="caixaMenuColab">
         <h3 class="caixaMenuColabTitulo">Gerenciar Doadores</h3>
