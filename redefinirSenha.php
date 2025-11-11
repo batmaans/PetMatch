@@ -24,7 +24,7 @@
                   <button type="submit" class="botaoEnviar" style="font-size: 18px;">ENVIAR</button>
                   <p class="espacamentoLeve">Você receberá um link de recuperação de senha.</p>
               </form>
-                  <p class= "espacamentoLeve" style="text-align: center; color: rgb(185, 185, 185);">Novo no PetMach? <a style="color: #BE5108;" href="CadastrarCliente.html">Cadastrar</a></p>
+                  <p class= "espacamentoLeve" style="text-align: center; color: rgb(185, 185, 185);">Novo no PetMach? <a style="color: #BE5108;" href="CadastrarCliente.php">Cadastrar</a></p>
       </div>
 
   <footer>

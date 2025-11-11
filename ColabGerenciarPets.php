@@ -13,25 +13,25 @@
   <header class="corsec">
     <a href="#"><img class="logo" src="img/logo-petmatch.png" alt="PetMatch"></a>
     <a href="#"><h2 class="corsecPages" href="#">PetMatch</h2></a>
-    <h3 class="corsecPages"><a class="botaoSair2" href="login.html">Sair</a></h3>
+    <h3 class="corsecPages"><a class="botaoSair2" href="login.php">Sair</a></h3>
   </header>
 
   <nav class="menu-horizontal2">
     <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="adote.html">Adote</a></li>
-      <li><a href="quemSomos.html">Quem Somos</a></li>
-      <li><a href="Contato.html">Contato</a></li>
-      <li><a href="Ajuda.html">Ajuda</a></li>
+      <li><a href="index.php">Início</a></li>
+      <li><a href="adote.php">Adote</a></li>
+      <li><a href="quemSomos.php">Quem Somos</a></li>
+      <li><a href="Contato.php">Contato</a></li>
+      <li><a href="Ajuda.php">Ajuda</a></li>
     </ul>
   </nav>
 
     <nav class="menu-colaborador">
       <ul>
-        <li><a href="ColabAreaColaborador.html">Dashboard</a></li>
+        <li><a href="ColabAreaColaborador.php">Dashboard</a></li>
         <li><a href="#" class="ativo">Gerenciar Dados</a></li>
-        <li><a href="ColabSolicitacoes.html">Solicitações de Adoção</a></li>
-        <li><a href="ColabRelatorios.html">Relatórios</a></li>
+        <li><a href="ColabSolicitacoes.php">Solicitações de Adoção</a></li>
+        <li><a href="ColabRelatorios.php">Relatórios</a></li>
       </ul>
   </nav>
 
@@ -51,7 +51,7 @@
         <button class="btn-destaque">Ir para area</button>
       </article>
 
-      <a href="ColabGerenciarDoadores.html" article class="caixaMenuColab">
+      <a href="ColabGerenciarDoadores.php" article class="caixaMenuColab">
         <h3 class="caixaMenuColabTitulo">Gerenciar Doadores</h3>
         <p class="Dashboard">Veja, cadastre, modifique ou exclua os dados dos doadores.</p>
         <button class="btn-destaque">Ir para area</button></a>

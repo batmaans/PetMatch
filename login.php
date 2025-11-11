@@ -20,11 +20,11 @@
               <form class="formulario">
                   <input type="email" id="email" name="email" placeholder="Email" required>
                   <input type="password" name="password" placeholder="Senha" required>
-                  <button type="submit" class="botaoEnviar"><h2><a class="textoBranco" href="index.html">ENTRE</a></button></h2>
+                  <button type="submit" class="botaoEnviar"><h2><a class="textoBranco" href="index.php">ENTRE</a></button></h2>
               </form>
           <nav>
               <div class="esqueciMeta">
-                  <a href="RedefinirSenha.html">Esqueci minha senha</a>
+                  <a href="RedefinirSenha.php">Esqueci minha senha</a>
                   <a href="#">Fazer login com SMS</a>
               </div>
               <div class="linha-ou">
@@ -35,8 +35,8 @@
                   <button> <img src="img/logo-google.png" alt="GOOGLE">Google</button>
                   <button> <img src="img/logo-apple.png" alt="APPLE">Apple</button>  
               </nav>
-                  <p class="textoCinza">Novo no PetMach? <a class="textoLaranja" href="CadastrarCliente.html">Cadastrar</a></p><br>
-                  <a class="textoLaranja" href="loginColaborador.html"><p>Área do Colaborador</p></a>
+                  <p class="textoCinza">Novo no PetMach? <a class="textoLaranja" href="CadastrarCliente.php">Cadastrar</a></p><br>
+                  <a class="textoLaranja" href="loginColaborador.php"><p>Área do Colaborador</p></a>
           </nav>
       </div>
 
