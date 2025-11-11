@@ -1,6 +1,8 @@
 <?php
 
+
 session_start();
+require "funcoesBD.php";
 
 //Cadastro de Cliente
 if(!empty($_POST['inputnome']) && !empty($_POST['inputsobrenome']) && !empty($_POST['inputcpf']) && !empty($_POST['inputdataNascimento']) && !empty($_POST['inputtelefone']) && !empty($_POST['inputemail']) && !empty($_POST['inputsenha'])){
@@ -13,6 +15,8 @@ $dataNascimento = $_POST['dataNascimento'];
 $telefone = $_POST['inputtelefone'];
 $email = $_POST['inputemail'];
 $senha = $_POST['inputsenha'];
+
+inserirCliente($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $email, $senha);
 
 echo "Nome: " .$nome
 }
