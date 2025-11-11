@@ -36,26 +36,17 @@
   </nav>
 
 
-  <section class="GerenciarPets">
-    <h2 class="corsecTitulo">Área do Colaborador</h2><br>
-    <div class="dashboardCaixas">
-      <article class="caixaMenuColab">
-        <h3 class="caixaMenuColabTitulo">Gerenciar Pets</h3>
-        <p class="Dashboard">Você pode adicionar, editar ou finalizar uma doação.</p>
-        <button class="btn-destaque">Ir para area</button>
-      </article>
+    <section class="GerenciarPets">
+    <h2 class="corsecTitulo">Gerenciar Pets</h2><br>
+    
+        <h3 class="caixaMenuColabTitulo">Ver Pets</h3>
+        
+        <h3 class="caixaMenuColabTitulo">Adicionar Novo Pet</h3>
 
-      <article class="caixaMenuColab">
-        <h3 class="caixaMenuColabTitulo">Gerenciar Clientes</h3>
-        <p class="Dashboard">Veja, cadastre, modifique ou exclua os dados dos clientes.</p>
-        <button class="btn-destaque">Ir para area</button>
-      </article>
+        <h3 class="caixaMenuColabTitulo">Editar Dados do Pet</h3>
 
-      <a href="ColabGerenciarDoadores.php" article class="caixaMenuColab">
-        <h3 class="caixaMenuColabTitulo">Gerenciar Doadores</h3>
-        <p class="Dashboard">Veja, cadastre, modifique ou exclua os dados dos doadores.</p>
-        <button class="btn-destaque">Ir para area</button></a>
-      </article>
+        <h3 class="caixaMenuColabTitulo">Remover Pet</h3>
+    
   </section>
 
 

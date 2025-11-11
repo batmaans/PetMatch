@@ -29,23 +29,23 @@
     <nav class="menu-colaborador">
       <ul>
         <li><a href="ColabAreaColaborador.php">Dashboard</a></li>
-        <li><a href="ColabGerenciar.php" class="ativo">Gerenciar Dados</a></li>
+        <li><a href="#" class="ativo">Gerenciar Dados</a></li>
         <li><a href="ColabSolicitacoes.php">Solicitações de Adoção</a></li>
         <li><a href="ColabRelatorios.php">Relatórios</a></li>
       </ul>
   </nav>
 
 
-  <section class="GerenciarPets">
-    <h2 class="corsecTitulo">Gerenciar Doadores</h2><br>
+    <section class="GerenciarPets">
+    <h2 class="corsecTitulo">Gerenciar Clientes</h2><br>
     
-        <h3 class="caixaMenuColabTitulo">Ver Doadores</h3>
+        <h3 class="caixaMenuColabTitulo">Ver Clientes</h3>
         
-        <h3 class="caixaMenuColabTitulo">Adicionar Novo Doador</h3>
+        <a href="CadastrarCliente.php" h3 class="caixaMenuColabTitulo">Adicionar Novo Cliente</h3>
 
-        <h3 class="caixaMenuColabTitulo">Editar Dados do Doador</h3>
+        <h3 class="caixaMenuColabTitulo">Editar Dados do Cliente</h3>
 
-        <h3 class="caixaMenuColabTitulo">Remover Doador</h3>
+        <h3 class="caixaMenuColabTitulo">Remover Cliente</h3>
     
   </section>
 

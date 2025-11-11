@@ -29,7 +29,7 @@
     <nav class="menu-colaborador">
       <ul>
         <li><a href="ColabAreaColaborador.php">Dashboard</a></li>
-        <li><a href="ColabGerenciarPets.php">Gerenciar Pets</a></li>
+        <li><a href="ColabGerenciar.php">Gerenciar Dados</a></li>
         <li><a href="ColabSolicitacoes.php">Solicitações de Adoção</a></li>
         <li><a href="#" class="ativo">Relatórios</a></li>
       </ul>
