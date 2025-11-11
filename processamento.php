@@ -1,26 +1,88 @@
 <?php
 
 session_start();
-require_once "funcoesBD.php";
 
 //Cadastro de Cliente
-if(!empty($_POST['inputNome']) && !empty($_POST['inputSobrenome']) && !empty($_POST['inputCPF']) && !empty($_POST['inputDataNasc'])
-   && !empty($_POST['inputTelefone']) && !empty($_POST['inputEmail']) && !empty($_POST['inputSenha']))
-{
+if(!empty($_POST['inputnome']) && !empty($_POST['inputsobrenome']) && !empty($_POST['inputcpf']) && !empty($_POST['inputdataNascimento']) && !empty($_POST['inputtelefone']) && !empty($_POST['inputemail']) && !empty($_POST['inputsenha'])){
 
-   $nome = $_POST['inputNome'];
-   $sobrenome = $_POST['inputSobrenome'];
-   $cpf = $_POST['inputCPF'];
-   $dataNasc = $_POST['inputDataNasc'];
-   $telefone = $_POST['inputTelefone'];
-   $email = $_POST['inputEmail'];
-   $senha = $_POST['inputSenha'];
 
-   inserirCliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha);
+$nome = $_POST['inputnome'];
+$sobrenome = $_POST['inputsobrenome'];
+$cpf = $_POST['inputcpf'];
+$dataNascimento = $_POST['dataNascimento'];
+$telefone = $_POST['inputtelefone'];
+$email = $_POST['inputemail'];
+$senha = $_POST['inputsenha'];
 
-   header('location:../view/cadastrarCliente.php');
-   die();
+echo "Nome: " .$nome
+}
+
+//Cadastro de animais
+
+if(!empty($_POST['inputnome']) && !empty($_POST['inputdataNascimento']) && !empty($_POST['inputidade']) && !empty($_POST['inputraca']) && !empty($_POST['inputcor'])){
+
+$nome = $_POST['inputnome'];
+$dataNascimento = $_POST['dataNascimento'];
+$idade = $_POST['inputidade'];
+$raca = $_POST['inputraca'];
+$cor = $_POST['inputcor'];
+
+echo "Nome: " .$nome
+
+}
+
+//Cadastro de colaboradores
+
+if(!empty($_POST['inputnome']) && !empty($_POST['inputsobrenome']) && !empty($_POST['inputcpf']) && !empty($_POST['inputdataNascimento']) && !empty($_POST['inputtelefone']) && !empty($_POST['inputemail']) && !empty($_POST['inputsenha']) && !empty($_POST['inputcargo']) && !empty($_POST['inputsalario'])){
+
+$nome = $_POST['inputnome'];
+$sobrenome = $_POST['inputsobrenome'];
+$cpf = $_POST['inputcpf'];
+$dataNascimento = $_POST['dataNascimento'];
+$telefone = $_POST['inputtelefone'];
+$email = $_POST['inputemail'];
+$senha = $_POST['inputsenha'];
+$cargo = $_POST['inputcargo'];
+$salario = $_POST['inputsalario'];
+
+echo "Nome: " .$nome
+
+}
+
+//Cadastro de doadores
+
+if(!empty($_POST['inputnome']) && !empty($_POST['inputsobrenome']) && !empty($_POST['inputcpf']) && !empty($_POST['inputdataNascimento']) && !empty($_POST['inputtelefone']) && !empty($_POST['inputemail']) && !empty($_POST['inputquantidadedeanimais']) && !empty($_POST['inputmotivodedoacao']) && !empty($_POST['inputdatadoacao'])){
+
+
+$nome = $_POST['inputnome'];
+$sobrenome = $_POST['inputsobrenome'];
+$cpf = $_POST['inputcpf'];
+$dataNascimento = $_POST['dataNascimento'];
+$telefone = $_POST['inputtelefone'];
+$email = $_POST['inputemail'];
+$quantidadedeanimais = $_POST['inputquantidadedeanimais'];
+$motivodedoacao = $_POST['inputmotivodedoacao'];
+$datadoacao = $_POST['inputdatadoacao'];
+
+echo "Nome: " .$nome
+
+}
+
+//Cadastro contato
+
+if(!empty($_POST['inputnome']) && !empty($_POST['inputemail']) && !empty($_POST['inputtelefone']) && !empty($_POST['inputassunto']) && !empty($_POST['inputmensagem'])){
+
+
+$nome = $_POST['inputnome'];
+$email = $_POST['inputemail'];
+$telefone = $_POST['inputtelefone'];
+$assunto = $_POST['inputassunto'];
+$mensagem = $_POST['mensagem'];
+
+echo "Nome: " .$nome
 
 }
 
 ?>
+
+ 
