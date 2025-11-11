@@ -13,16 +13,16 @@
   <header class="corsec">
     <a href="#"><img class="logo" src="img/logo-petmatch.png" alt="PetMatch"></a>
     <a href="#"><h2 class="corsecPages" href="#">PetMatch</h2></a>
-    <h3 class="corsecPages"><a class="botaoSair2" href="login.html">Sair</a></h3>
+    <h3 class="corsecPages"><a class="botaoSair2" href="login.php">Sair</a></h3>
   </header>
 
   <nav class="menu-horizontal2">
     <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="adote.html">Adote</a></li>
-      <li><a href="quemSomos.html">Quem Somos</a></li>
-      <li><a href="contato.html">Contato</a></li>
-      <li><a href="Ajuda.html" class="ativo">Ajuda</a></li>
+      <li><a href="index.php">Início</a></li>
+      <li><a href="adote.php">Adote</a></li>
+      <li><a href="quemSomos.php">Quem Somos</a></li>
+      <li><a href="contato.php">Contato</a></li>
+      <li><a href="Ajuda.php" class="ativo">Ajuda</a></li>
     </ul>
   </nav>
 
@@ -97,7 +97,7 @@
       <div class="bloco-ajuda destaque-ajuda">
         <h2>❓ Ainda com dúvidas?</h2>
         <p>Se não encontrou o que procurava, fale com a gente! Nossa equipe está sempre pronta para ajudar. 💌</p>
-        <a href="contato.html" class="botaoEnviar">Ir para Contato</a>
+        <a href="contato.php" class="botaoEnviar">Ir para Contato</a>
       </div>
 
     </div>

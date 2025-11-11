@@ -12,16 +12,16 @@
   <header class="corsec">
     <a href="#"><img class="logo" src="img/logo-petmatch.png" alt="PetMatch"></a>
     <a href="#"><h2 class="corsecPages" href="#">PetMatch</h2></a>
-    <h3 class="corsecPages"><a class="botaoSair2" href="login.html">Sair</a></h3>
+    <h3 class="corsecPages"><a class="botaoSair2" href="login.php">Sair</a></h3>
   </header>
 
   <nav class="menu-horizontal2">
     <ul>
-      <li><a href="index.html" class="ativo">Início</a></li>
-      <li><a href="adote.html">Adote</a></li>
-      <li><a href="quemSomos.html">Quem Somos</a></li>
-      <li><a href="Contato.html">Contato</a></li>
-      <li><a href="Ajuda.html">Ajuda</a></li>
+      <li><a href="index.php" class="ativo">Início</a></li>
+      <li><a href="adote.php">Adote</a></li>
+      <li><a href="quemSomos.php">Quem Somos</a></li>
+      <li><a href="Contato.php">Contato</a></li>
+      <li><a href="Ajuda.php">Ajuda</a></li>
     </ul>
   </nav>
 
@@ -29,7 +29,7 @@
     <div class="hero-conteudo">
       <h1 class="titulo-hero">Dê um match com o amor da sua vida — de quatro patas ❤️</h1>
       <p class="sub-hero">O PetMatch conecta pets esperando um lar com pessoas com coração — encontre seu novo melhor amigo.</p>
-      <a class="botaoEnviar btn-destaque" href="adote.html">Conheça os Pets</a>
+      <a class="botaoEnviar btn-destaque" href="adote.php">Conheça os Pets</a>
     </div>
   </section>
 
