@@ -46,8 +46,6 @@
                 <input type="email" id="email" name="email" placeholder="E-mail" required>
 
                 <input type="password" id="senha" name="senha" placeholder="Senha" required>
-                
-                <input type="password" id="senha" name="senha" placeholder="Repita a Senha" required>
 
                 <input class="botaoEnviar" type="submit" value="CADASTRAR">
             </form>
