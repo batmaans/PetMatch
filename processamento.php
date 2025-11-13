@@ -18,7 +18,7 @@ $senha = $_POST['inputsenha'];
 
 inserirCliente($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $email, $senha);
 
-echo "Nome: " .$nome . "Sobrenome". $sobrenome. "CPF". $cpf. "Data de nascimento". $dataNascimento "Telefone". $telefone. "Email". $email. "Senha". $senha. ; 
+echo "Nome: " .$nome . "Sobrenome". $sobrenome. "CPF". $cpf. "Data de nascimento". $dataNascimento "Telefone". $telefone. "Email". $email. "Senha". $senha; 
 
 header('location:CadastrarCliente.php');
 die();
