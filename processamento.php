@@ -31,7 +31,7 @@ $idade = $_POST['inputidade'];
 $raca = $_POST['inputraca'];
 $cor = $_POST['inputcor'];
 
-echo "Nome: " .$nome
+echo "Nome: " .$nome;
 
 }
 
@@ -49,7 +49,7 @@ $senha = $_POST['inputsenha'];
 $cargo = $_POST['inputcargo'];
 $salario = $_POST['inputsalario'];
 
-echo "Nome: " .$nome
+echo "Nome: " .$nome;
 
 }
 
@@ -68,7 +68,7 @@ $quantidadedeanimais = $_POST['inputquantidadedeanimais'];
 $motivodedoacao = $_POST['inputmotivodedoacao'];
 $datadoacao = $_POST['inputdatadoacao'];
 
-echo "Nome: " .$nome
+echo "Nome: " .$nome;
 
 }
 
@@ -83,7 +83,7 @@ $telefone = $_POST['inputtelefone'];
 $assunto = $_POST['inputassunto'];
 $mensagem = $_POST['mensagem'];
 
-echo "Nome: " .$nome
+echo "Nome: " .$nome;
 
 }
 

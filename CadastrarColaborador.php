@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Faça seu Cadastro | PetMatch</title>
+  <title>Cadastro Colaborador | PetMatch</title>
 
   <link rel="stylesheet" href="style.css" />
   <script defer src="adote.js"></script>
@@ -28,7 +28,7 @@
 
   <section class="cadastro">
     <div class="linha-ou"></div>
-    <h2 class="corsecTitulo">Faça seu cadastro, e seja bem vindo! ❤️</h2>
+    <h2 class="corsecTitulo">Cadastro de Colaborador.</h2>
     
       <div class="janRedSenha" style="width: 40%;">
           <h2 class="corsecTitulo" style="margin-bottom: 25px;">Au au? Miau? </h2>

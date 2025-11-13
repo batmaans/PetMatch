@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Faça seu Cadastro | PetMatch</title>
+  <title>Cadastro de Pets | PetMatch</title>
 
   <link rel="stylesheet" href="style.css" />
   <script defer src="adote.js"></script>
@@ -28,16 +28,16 @@
 
   <section class="cadastro">
     <div class="linha-ou"></div>
-    <h2 class="corsecTitulo">Faça seu cadastro, e seja bem vindo! ❤️</h2>
+    <h2 class="corsecTitulo">Cadastro de Pets</h2>
     
       <div class="janRedSenha" style="width: 40%;">
           <h2 class="corsecTitulo" style="margin-bottom: 25px;">Au au? Miau? </h2>
             <form class="formulario" action="processamento.php" method="post"> 
                 <input type="text" id="nome" name="nome" placeholder="Nome" required>
 
-                <input type="date" id="data_nascimento" name="data_nascimento" placeholder="Data de Nascimento" required>
+                <input type="date" id="data_nascimento" name="data_nascimento" placeholder="Data de Nascimento">
 
-                <input type="idade" id="idade" name="idade" placeholder="Idade" required>
+                <input type="idade" id="idade" name="idade" placeholder="Idade">
 
                 <input type="raca" id="raca" name="raca" placeholder="Raça" required>
 
