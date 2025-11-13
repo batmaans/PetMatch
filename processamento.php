@@ -18,7 +18,7 @@ $senha = $_POST['inputsenha'];
 
 inserirCliente($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $email, $senha);
 
-echo "Nome: " .$nome
+echo "Nome: " .$nome . "Sobrenome". $sobrenome. "CPF". $cpf. "Data de nascimento". $dataNasc "Telefone". $telefone. "Email". $email. "Senha". $senha. ; 
 }
 
 //Cadastro de animais
@@ -86,6 +86,9 @@ $mensagem = $_POST['mensagem'];
 echo "Nome: " .$nome
 
 }
+
+header('location:CadastrarCliente.php');
+die();
 
 ?>
 
