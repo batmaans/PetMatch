@@ -39,13 +39,13 @@
 
                 <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
 
-                <input type="text" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento" required>
+                <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento" required>
 
-                <input type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+                <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
 
                 <input type="text" id="email" name="email" placeholder="E-mail" required>
 
-                <input type="text" id="senha" name="senha" placeholder="Senha" required>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
 
                 <input class="botaoEnviar" type="submit" value="CADASTRAR">
             </form>
