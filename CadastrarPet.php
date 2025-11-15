@@ -35,7 +35,7 @@
             <form class="formulario" action="processamento.php" method="post"> 
                 <input type="text" id="nome" name="nome" placeholder="Nome" required>
 
-                <input type="date" id="data_nascimento" name="data_nascimento" placeholder="Data de Nascimento">
+                <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento">
 
                 <input type="idade" id="idade" name="idade" placeholder="Idade">
 

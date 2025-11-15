@@ -31,7 +31,7 @@
       <h2>Fale com a gente 💌</h2>
       <p>Quer adotar, ser voluntário ou tirar dúvidas? A PetMatch adora conversar com você! Preencha o formulário ou escolha uma das opções abaixo.</p>
       <div class="janRedSenha2">
-            <form class="formulario2" action="cadastrar" method="post">
+            <form class="formulario2" action="processamento.php" method="post">
                 <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
 
                 <input type="email" id="email" name="email" placeholder="E-mail" required>

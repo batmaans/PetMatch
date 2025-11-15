@@ -39,7 +39,7 @@
 
                 <input type="text" id="CPF" name="CPF" placeholder="CPF" required>
 
-                <input type="date" id="data_nascimento" name="data_nascimento" placeholder="Data de Nascimento" required>
+                <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento" required>
 
                 <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
 
