@@ -20,6 +20,10 @@ inserirCliente($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $email, $sen
 
 //echo "Nome: ". $nome. "Sobrenome: ". $sobrenome. "CPF: ". $cpf. "Data de nascimento: ". $dataNascimento. "Telefone: ". $telefone. "Email: ". $email. "Senha: ". $senha; 
 
+header('location:CadastrarCliente.php');
+die();
+}
+
 //Cadastro contato
 
 
@@ -33,6 +37,10 @@ $mensagem = $_POST['mensagem'];
 
 //echo "Nome: " .$nome;
 
+inserirContato($nome, $email, $telefone, $assunto, $mensagem);
+
+header('location:Contato.php');
+die();
 
 }
 
@@ -51,6 +59,10 @@ $cor = $_POST['cor'];
 
 //echo "Nome: " .$nome;
 
+inserirAnimais($nome, $dataNascimento, $idade, $raca, $cor);
+
+header('location:CadastrarPet.php');
+die();
 
 }
 
@@ -73,6 +85,10 @@ $salario = $_POST['salario'];
 
 //echo "Nome: " .$nome;
 
+inserirColaboradores($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $email, $senha, $cargo, $salario);
+
+header('location:CadastrarColaborador.php');
+die();
 
 }
 
@@ -80,8 +96,6 @@ $salario = $_POST['salario'];
 
 
 if(!empty($_POST['nome']) && !empty($_POST['sobrenome']) && !empty($_POST['cpf']) && !empty($_POST['dataNascimento']) && !empty($_POST['telefone']) && !empty($_POST['email']) && !empty($_POST['quantidadedeanimais']) && !empty($_POST['motivodedoacao']) && !empty($_POST['datadoacao'])){
-
-
 
 
 $nome = $_POST['nome'];
@@ -97,14 +111,18 @@ $datadoacao = $_POST['datadoacao'];
 
 //echo "Nome: " .$nome;
 
+inserirDoadores($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $email, $quantidadedeanimais, $motivodedoacao, $datadoacao);
 
-}
-
-
-header('location:CadastrarCliente.php');
+header('location:CadastrarDoadores.php');
 die();
 
 }
+
+
+
+
+
+
 
 ?>
 
