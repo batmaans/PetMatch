@@ -1,7 +1,7 @@
 <?php
 
 function conectarBD(){
-    $conexao = mysqli_connect("localhost", "root", "", "petadocao");
+    $conexao = mysqli_connect("localhost", "root", "", "petadocao2");
     return($conexao);
 }
 
