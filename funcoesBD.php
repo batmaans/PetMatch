@@ -12,7 +12,7 @@ function conectarBD(){
     return $con;
 }
 
-/* --- Funções de inserção usando prepared statements --- */
+/*  funções de inserção usando prepared statements  */
 function inserirCliente($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $email, $senha){
     $con = conectarBD();
     $sql = "INSERT INTO cadastroclientes (nome, sobrenome, cpf, dataNascimento, telefone, email, senha) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -68,7 +68,7 @@ function inserirDoador($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $ema
     return $ok;
 }
 
-/* --- Funções de leitura --- */
+/*  funções de leitura  */
 function retornarCliente(){
     $con = conectarBD();
     $sql = "SELECT nome, sobrenome, cpf, dataNascimento, telefone, email FROM cadastroclientes ORDER BY nome";
@@ -76,7 +76,7 @@ function retornarCliente(){
     return $res;
 }
 
-/* --- Funções de inserção adicionais --- */
+/*  funções de inserção adicionais  */
 function inserirAnimais($nome, $dataNascimento, $idade, $raca, $cor){
     $con = conectarBD();
     $sql = "INSERT INTO cadastroanimais (nome, dataNascimento, idade, raca, cor) VALUES (?, ?, ?, ?, ?)";
@@ -110,7 +110,7 @@ function inserirDoadores($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $e
     return $ok;
 }
 
-/* --- Funções de leitura adicionais --- */
+/* funções de leitura adicionais */
 function retornarPets(){
     $con = conectarBD();
     $sql = "SELECT nome, dataNascimento, idade, raca, cor FROM cadastroanimais ORDER BY nome";

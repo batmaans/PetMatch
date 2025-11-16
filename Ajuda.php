@@ -29,14 +29,12 @@
   <section class="ajuda">
     <div class="container-ajuda">
 
-      <!-- Seção de introdução -->
       <div class="bloco-ajuda destaque-ajuda">
         <h2>💬 Central de Ajuda PetMatch</h2>
         <p>Bem-vindo à nossa central de ajuda! Aqui você encontra respostas para as dúvidas mais comuns sobre adoção, voluntariado, doações e o funcionamento do site. 🐾</p>
         <p>Se não encontrar o que procura, entre em contato conosco — teremos prazer em ajudar!</p>
       </div>
 
-      <!-- Sobre a Adoção -->
       <div class="bloco-ajuda">
         <h2>🐶 Sobre a Adoção</h2>
         <div class="faq-item">
@@ -55,7 +53,6 @@
         </div>
       </div>
 
-      <!-- Doações e Voluntariado -->
       <div class="bloco-ajuda">
         <h2>💖 Doações e Voluntariado</h2>
         <div class="faq-item">
@@ -74,7 +71,6 @@
         </div>
       </div>
 
-      <!-- Site e Cadastro -->
       <div class="bloco-ajuda">
         <h2>🐾 Site e Cadastro</h2>
         <div class="faq-item">
@@ -93,7 +89,6 @@
         </div>
       </div>
 
-      <!-- Encerramento -->
       <div class="bloco-ajuda destaque-ajuda">
         <h2>❓ Ainda com dúvidas?</h2>
         <p>Se não encontrou o que procurava, fale com a gente! Nossa equipe está sempre pronta para ajudar. 💌</p>
