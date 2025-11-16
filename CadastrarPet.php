@@ -26,7 +26,7 @@
     </ul>
   </nav>
 
-  <section class="cadastro">
+<section class="cadastro">
     <div class="linha-ou"></div>
     <h2 class="corsecTitulo">Cadastro de Pets</h2>
     
@@ -37,11 +37,11 @@
 
                 <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento">
 
-                <input type="idade" id="idade" name="idade" placeholder="Idade">
+                <input type="number" id="idade" name="idade" placeholder="Idade" min="0" max="30">
 
-                <input type="raca" id="raca" name="raca" placeholder="Raça" required>
+                <input type="text" id="raca" name="raca" placeholder="Raça" required>
 
-                <input type="cor" id="cor" name="cor" placeholder="Cor" required>
+                <input type="text" id="cor" name="cor" placeholder="Cor" required>
 
                 <input class="botaoEnviar" type="submit" value="CADASTRAR">
             </form>

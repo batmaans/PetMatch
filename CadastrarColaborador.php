@@ -37,7 +37,7 @@
 
                 <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
 
-                <input type="text" id="CPF" name="CPF" placeholder="CPF" required>
+                <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
 
                 <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento" required>
 
@@ -47,15 +47,15 @@
 
                 <input type="password" id="senha" name="senha" placeholder="Senha" required>
 
-                <input type="cargo" id="cargo" name="cargo" placeholder="Cargo" required>
+                <input type="text" id="cargo" name="cargo" placeholder="Cargo" required>
                 
-                <input type="salario" id="salario" name="salario" placeholder="Salario" required>
+                <input type="number" id="salario" name="salario" placeholder="Salário" step="0.01" min="0" required>
 
                 <input class="botaoEnviar" type="submit" value="CADASTRAR">
             </form>
       </div>
   </section>
-
+  
   <footer>
     <section class="rodapes">
       <section>

@@ -39,43 +39,8 @@
     <section class="GerenciarPets">
     <h2 class="corsecTitulo">Gerenciar Clientes</h2><br>
     
-        <h3 class="caixaMenuColabTitulo">
-          <a href="ColabGerenciarClientes.php?verClientes=1">Ver Clientes</a>
-        </h3>
-        <?php
-          if (isset($_GET['verClientes'])) {
-
-              include 'conexao.php'; // seu arquivo de conexão ao MySQL
-
-              $sql = "SELECT id, nome, email, telefone FROM clientes";
-              $result = $conn->query($sql);
-
-              echo "<div class='lista-clientes'>";
-              echo "<h3>Lista de Clientes</h3>";
-
-              if ($result->num_rows > 0) {
-                  echo "<table class='tabelaClientes'>";
-                  echo "<tr><th>ID</th><th>Nome</th><th>Email</th><th>Telefone</th></tr>";
-
-                  while ($row = $result->fetch_assoc()) {
-                      echo "<tr>";
-                      echo "<td>".$row['id']."</td>";
-                      echo "<td>".$row['nome']."</td>";
-                      echo "<td>".$row['email']."</td>";
-                      echo "<td>".$row['telefone']."</td>";
-                      echo "</tr>";
-                  }
-
-                  echo "</table>";
-              } else {
-                  echo "<p>Nenhum cliente encontrado.</p>";
-              }
-
-              echo "</div>";
-          }
-        ?>
-
-
+        <a href="ColabGerenciarClientesVer.php"><h3 class="caixaMenuColabTitulo">Ver Clientes</h3></a>
+        
         <a href="CadastrarCliente.php"><h3 class="caixaMenuColabTitulo">Adicionar Novo Cliente</h3></a>
 
         <h3 class="caixaMenuColabTitulo">Editar Dados do Cliente</h3>

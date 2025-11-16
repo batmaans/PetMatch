@@ -1,3 +1,6 @@
+<?php
+    require_once "funcoesBD.php"; 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -39,14 +42,25 @@
     <section class="GerenciarPets">
     <h2 class="corsecTitulo">Gerenciar Pets</h2><br>
     
-        <a href="colabGerenciarPetsVer.php"><h3 class="caixaMenuColabTitulo">Ver Pets</h3></a>
+        <h3 class="caixaMenuColabTitulo">Ver Pets</h3>
         
-        <a href="CadastrarPet.php"><h3 class="caixaMenuColabTitulo">Adicionar Novo Pet</h3></a>
-
-        <h3 class="caixaMenuColabTitulo">Editar Dados do Pet</h3>
-
-        <h3 class="caixaMenuColabTitulo">Remover Pet</h3>
-    
+         <?php
+          $listaPets = retornarPets();
+          if($listaPets && mysqli_num_rows($listaPets) > 0){
+              while($pet = mysqli_fetch_assoc($listaPets)){
+                  echo "<section class='cliente-card'>";
+                  echo "<h2>" . htmlspecialchars($pet["nome"]) . "</h2>";
+                  echo "<p>Data Nascimento: " . htmlspecialchars($pet["dataNascimento"]) . "</p>";
+                  echo "<p>Idade: " . htmlspecialchars($pet["idade"]) . " anos</p>";
+                  echo "<p>Raça: " . htmlspecialchars($pet["raca"]) . "</p>";
+                  echo "<p>Cor: " . htmlspecialchars($pet["cor"]) . "</p>";
+                  echo "</section>";
+              }
+              mysqli_free_result($listaPets);
+          } else {
+              echo "<p>Nenhum pet encontrado.</p>";
+          }
+        ?>        
   </section>
 
 

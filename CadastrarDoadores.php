@@ -37,7 +37,7 @@
 
                 <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
 
-                <input type="text" id="CPF" name="cpf" placeholder="CPF" required>
+                <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
 
                 <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento" required>
 
@@ -45,11 +45,11 @@
 
                 <input type="email" id="email" name="email" placeholder="E-mail" required>
 
-                <input type="quantidadedeanimais" id="quantidadedeanimais" name="quantidadedeanimais" placeholder="Quantidade de Animais" required>
+                <input type="number" id="quantidadedeanimais" name="quantidadedeanimais" placeholder="Quantidade de Animais" min="1" required>
 
-                <input type="motivodedoacao" id="motivodedoacao" name="motivodedoacao" placeholder="Motivo de Doação" required>
+                <input type="text" id="motivodedoacao" name="motivodedoacao" placeholder="Motivo de Doação" required>
                 
-                <input type="datadoacao" id="datadoacao" name="datadoacao" placeholder="Data da Doação" required>
+                <input type="date" id="datadoacao" name="datadoacao" placeholder="Data da Doação" required>
 
                 <input class="botaoEnviar" type="submit" value="CADASTRAR">
             </form>

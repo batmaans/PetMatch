@@ -39,9 +39,9 @@
   <section class="GerenciarPets">
     <h2 class="corsecTitulo">Gerenciar Doadores</h2><br>
     
-        <h3 class="caixaMenuColabTitulo">Ver Doadores</h3>
+        <a href="ColabGerenciarDoadoresVer.php"><h3 class="caixaMenuColabTitulo">Ver Doadores</h3></a>
         
-        <h3 class="caixaMenuColabTitulo">Adicionar Novo Doador</h3>
+        <a href="CadastrarDoadores.php"><h3 class="caixaMenuColabTitulo">Adicionar Novo Doador</h3></a>
 
         <h3 class="caixaMenuColabTitulo">Editar Dados do Doador</h3>
 

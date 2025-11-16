@@ -634,19 +634,3 @@ footer{margin-top:36px}
   from { transform: scale(0.7); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
-
-.tabelaClientes {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-  background: #fff;
-}
-
-.tabelaClientes th, .tabelaClientes td {
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-
-.tabelaClientes th {
-  background: #f2f2f2;
-}

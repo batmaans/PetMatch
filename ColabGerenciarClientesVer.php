@@ -1,3 +1,6 @@
+<?php
+    require_once "funcoesBD.php"; 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -37,15 +40,29 @@
 
 
     <section class="GerenciarPets">
-    <h2 class="corsecTitulo">Gerenciar Pets</h2><br>
+    <h2 class="corsecTitulo">Gerenciar Clientes</h2><br>
     
-        <a href="colabGerenciarPetsVer.php"><h3 class="caixaMenuColabTitulo">Ver Pets</h3></a>
+        <h3 class="caixaMenuColabTitulo">Ver Clientes</h3>
         
-        <a href="CadastrarPet.php"><h3 class="caixaMenuColabTitulo">Adicionar Novo Pet</h3></a>
+        <?php
+          require_once "funcoesBD.php";
 
-        <h3 class="caixaMenuColabTitulo">Editar Dados do Pet</h3>
-
-        <h3 class="caixaMenuColabTitulo">Remover Pet</h3>
+          $listaCliente = retornarCliente();
+          if($listaCliente && mysqli_num_rows($listaCliente) > 0){
+              while($cliente = mysqli_fetch_assoc($listaCliente)){
+                  echo "<section class='cliente-card'>";
+                  echo "<h2>" . htmlspecialchars($cliente["nome"] . " " . $cliente["sobrenome"]) . "</h2>";
+                  echo "<p>CPF: " . htmlspecialchars($cliente["cpf"]) . "</p>";
+                  echo "<p>Data Nascimento: " . htmlspecialchars($cliente["dataNascimento"]) . "</p>";
+                  echo "<p>Telefone: " . htmlspecialchars($cliente["telefone"]) . "</p>";
+                  echo "<p>E-mail: " . htmlspecialchars($cliente["email"]) . "</p>";
+                  echo "</section>";
+              }
+              mysqli_free_result($listaCliente);
+          } else {
+              echo "<p>Nenhum cliente encontrado.</p>";
+          }
+        ?>
     
   </section>
 

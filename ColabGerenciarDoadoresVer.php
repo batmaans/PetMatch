@@ -1,3 +1,7 @@
+<?php
+    require_once "funcoesBD.php"; 
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -29,26 +33,40 @@
     <nav class="menu-colaborador">
       <ul>
         <li><a href="ColabAreaColaborador.php">Dashboard</a></li>
-        <li><a href="#" class="ativo">Gerenciar Dados</a></li>
+        <li><a href="ColabGerenciar.php" class="ativo">Gerenciar Dados</a></li>
         <li><a href="ColabSolicitacoes.php">Solicitações de Adoção</a></li>
         <li><a href="ColabRelatorios.php">Relatórios</a></li>
       </ul>
   </nav>
 
 
-    <section class="GerenciarPets">
-    <h2 class="corsecTitulo">Gerenciar Pets</h2><br>
+  <section class="GerenciarPets">
+    <h2 class="corsecTitulo">Gerenciar Doadores</h2><br>
     
-        <a href="colabGerenciarPetsVer.php"><h3 class="caixaMenuColabTitulo">Ver Pets</h3></a>
-        
-        <a href="CadastrarPet.php"><h3 class="caixaMenuColabTitulo">Adicionar Novo Pet</h3></a>
-
-        <h3 class="caixaMenuColabTitulo">Editar Dados do Pet</h3>
-
-        <h3 class="caixaMenuColabTitulo">Remover Pet</h3>
-    
+        <h3 class="caixaMenuColabTitulo">Ver Doadores</h3>
+                
+        <?php
+          $listaDoadores = retornarDoadores();
+          if($listaDoadores && mysqli_num_rows($listaDoadores) > 0){
+              while($doador = mysqli_fetch_assoc($listaDoadores)){
+                  echo "<section class='cliente-card'>";
+                  echo "<h2>" . htmlspecialchars($doador["nome"] . " " . $doador["sobrenome"]) . "</h2>";
+                  echo "<p>CPF: " . htmlspecialchars($doador["cpf"]) . "</p>";
+                  echo "<p>Data Nascimento: " . htmlspecialchars($doador["dataNascimento"]) . "</p>";
+                  echo "<p>Telefone: " . htmlspecialchars($doador["telefone"]) . "</p>";
+                  echo "<p>E-mail: " . htmlspecialchars($doador["email"]) . "</p>";
+                  echo "<p>Quantidade de Animais: " . htmlspecialchars($doador["quantidadedeanimais"]) . "</p>";
+                  echo "<p>Motivo: " . htmlspecialchars($doador["motivodedoacao"]) . "</p>";
+                  echo "<p>Data Doação: " . htmlspecialchars($doador["datadoacao"]) . "</p>";
+                  echo "</section>";
+              }
+              mysqli_free_result($listaDoadores);
+          } else {
+              echo "<p>Nenhum doador encontrado.</p>";
+          }
+        ?>
+             
   </section>
-
 
   <footer>
     <section class="rodapes">
