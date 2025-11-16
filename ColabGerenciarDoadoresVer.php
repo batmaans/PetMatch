@@ -45,26 +45,30 @@
     
         <h3 class="caixaMenuColabTitulo">Ver Doadores</h3>
                 
-        <?php
+        <div class="cards-container">
+          <?php
+          require_once "funcoesBD.php";
+
           $listaDoadores = retornarDoadores();
           if($listaDoadores && mysqli_num_rows($listaDoadores) > 0){
               while($doador = mysqli_fetch_assoc($listaDoadores)){
                   echo "<section class='cliente-card'>";
                   echo "<h2>" . htmlspecialchars($doador["nome"] . " " . $doador["sobrenome"]) . "</h2>";
-                  echo "<p>CPF: " . htmlspecialchars($doador["cpf"]) . "</p>";
-                  echo "<p>Data Nascimento: " . htmlspecialchars($doador["dataNascimento"]) . "</p>";
-                  echo "<p>Telefone: " . htmlspecialchars($doador["telefone"]) . "</p>";
-                  echo "<p>E-mail: " . htmlspecialchars($doador["email"]) . "</p>";
-                  echo "<p>Quantidade de Animais: " . htmlspecialchars($doador["quantidadedeanimais"]) . "</p>";
-                  echo "<p>Motivo: " . htmlspecialchars($doador["motivodedoacao"]) . "</p>";
-                  echo "<p>Data Doação: " . htmlspecialchars($doador["datadoacao"]) . "</p>";
+                  echo "<p><strong>CPF:</strong> " . htmlspecialchars($doador["cpf"]) . "</p>";
+                  echo "<p><strong>Data Nascimento:</strong> " . htmlspecialchars($doador["dataNascimento"]) . "</p>";
+                  echo "<p><strong>Telefone:</strong> " . htmlspecialchars($doador["telefone"]) . "</p>";
+                  echo "<p><strong>E-mail:</strong> " . htmlspecialchars($doador["email"]) . "</p>";
+                  echo "<p><strong>Quantidade de Animais:</strong> " . htmlspecialchars($doador["quantidadedeanimais"]) . "</p>";
+                  echo "<p><strong>Motivo:</strong> " . htmlspecialchars($doador["motivodedoacao"]) . "</p>";
+                  echo "<p><strong>Data Doação:</strong> " . htmlspecialchars($doador["datadoacao"]) . "</p>";
                   echo "</section>";
               }
               mysqli_free_result($listaDoadores);
           } else {
               echo "<p>Nenhum doador encontrado.</p>";
           }
-        ?>
+          ?>
+        </div>
              
   </section>
 

@@ -44,24 +44,26 @@
     
         <h3 class="caixaMenuColabTitulo">Ver Pets</h3>
         
-         <?php
-          $listaPets = retornarPets();
-          if($listaPets && mysqli_num_rows($listaPets) > 0){
-              while($pet = mysqli_fetch_assoc($listaPets)){
-                  echo "<section class='cliente-card'>";
-                  echo "<h2>" . htmlspecialchars($pet["nome"]) . "</h2>";
-                  echo "<p>Data Nascimento: " . htmlspecialchars($pet["dataNascimento"]) . "</p>";
-                  echo "<p>Idade: " . htmlspecialchars($pet["idade"]) . " anos</p>";
-                  echo "<p>Raça: " . htmlspecialchars($pet["raca"]) . "</p>";
-                  echo "<p>Cor: " . htmlspecialchars($pet["cor"]) . "</p>";
-                  echo "</section>";
-              }
-              mysqli_free_result($listaPets);
-          } else {
-              echo "<p>Nenhum pet encontrado.</p>";
-          }
-        ?>        
-  </section>
+         <div class="cards-container">
+          <?php
+            $listaPets = retornarPets();
+            if($listaPets && mysqli_num_rows($listaPets) > 0){
+                while($pet = mysqli_fetch_assoc($listaPets)){
+                    echo "<section class='cliente-card'>";
+                    echo "<h2>" . htmlspecialchars($pet["nome"]) . "</h2>";
+                    echo "<p><strong>Data Nascimento:</strong> " . htmlspecialchars($pet["dataNascimento"]) . "</p>";
+                    echo "<p><strong>Idade:</strong> " . htmlspecialchars($pet["idade"]) . " anos</p>";
+                    echo "<p><strong>Raça:</strong> " . htmlspecialchars($pet["raca"]) . "</p>";
+                    echo "<p><strong>Cor:</strong> " . htmlspecialchars($pet["cor"]) . "</p>";
+                    echo "</section>";
+                }
+                mysqli_free_result($listaPets);
+            } else {
+                echo "<p>Nenhum pet encontrado.</p>";
+            }
+          ?>    
+    </div>        
+    </section>
 
 
   <footer>

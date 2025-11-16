@@ -634,3 +634,65 @@ footer{margin-top:36px}
   from { transform: scale(0.7); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+.cliente-card {
+    background: var(--branco);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--marrom);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cliente-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.cliente-card h2 {
+    color: var(--marrom);
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--bege);
+    padding-bottom: 8px;
+}
+
+.cliente-card p {
+    color: var(--cinza);
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.cliente-card p strong {
+    color: var(--preto);
+}
+
+.GerenciarPets {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 20px;
+    }
+    
+    .cliente-card {
+        margin: 0;
+    }
+}
+
+/* lista vazia */
+.GerenciarPets p {
+    text-align: center;
+    color: var(--cinza);
+    font-style: italic;
+    padding: 40px;
+    background: var(--branco);
+    border-radius: 12px;
+    margin: 20px 0;
+}

@@ -44,25 +44,27 @@
     
         <h3 class="caixaMenuColabTitulo">Ver Clientes</h3>
         
+        <div class="cards-container">
         <?php
-          require_once "funcoesBD.php";
+        require_once "funcoesBD.php";
 
-          $listaCliente = retornarCliente();
-          if($listaCliente && mysqli_num_rows($listaCliente) > 0){
-              while($cliente = mysqli_fetch_assoc($listaCliente)){
-                  echo "<section class='cliente-card'>";
-                  echo "<h2>" . htmlspecialchars($cliente["nome"] . " " . $cliente["sobrenome"]) . "</h2>";
-                  echo "<p>CPF: " . htmlspecialchars($cliente["cpf"]) . "</p>";
-                  echo "<p>Data Nascimento: " . htmlspecialchars($cliente["dataNascimento"]) . "</p>";
-                  echo "<p>Telefone: " . htmlspecialchars($cliente["telefone"]) . "</p>";
-                  echo "<p>E-mail: " . htmlspecialchars($cliente["email"]) . "</p>";
-                  echo "</section>";
-              }
-              mysqli_free_result($listaCliente);
-          } else {
-              echo "<p>Nenhum cliente encontrado.</p>";
-          }
+        $listaCliente = retornarCliente();
+        if($listaCliente && mysqli_num_rows($listaCliente) > 0){
+            while($cliente = mysqli_fetch_assoc($cliente)){
+                echo "<section class='cliente-card'>";
+                echo "<h2>" . htmlspecialchars($cliente["nome"] . " " . $cliente["sobrenome"]) . "</h2>";
+                echo "<p><strong>CPF:</strong> " . htmlspecialchars($cliente["cpf"]) . "</p>";
+                echo "<p><strong>Data Nascimento:</strong> " . htmlspecialchars($cliente["dataNascimento"]) . "</p>";
+                echo "<p><strong>Telefone:</strong> " . htmlspecialchars($cliente["telefone"]) . "</p>";
+                echo "<p><strong>E-mail:</strong> " . htmlspecialchars($cliente["email"]) . "</p>";
+                echo "</section>";
+            }
+            mysqli_free_result($listaCliente);
+        } else {
+            echo "<p>Nenhum cliente encontrado.</p>";
+        }
         ?>
+    </div>
     
   </section>
 
