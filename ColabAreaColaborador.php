@@ -37,6 +37,22 @@
 
   <section class="Dashboard">
     <h2 class="corsecTitulo">Veja as principais notificações:</h2><br>
+    <?php
+    require_once "funcoesBD.php";
+    $totalContatos = contarContatosNaoLidos();
+    ?>
+    <div class="cliente-card" style="max-width: 800px; margin: 20px auto; text-align: center;">
+        <h2>📬 Mensagens de Contato</h2>
+        <?php if($totalContatos > 0): ?>
+            <p style="color: var(--vermelho); font-weight: bold; font-size: 1.2rem;">
+                Você tem <strong><?php echo $totalContatos; ?></strong> nova(s) mensagem(ns) de contato!
+            </p>
+            <a href="ColabGerenciarContatos.php" style="display: inline-block; margin-top: 15px;">
+                <button class="btn-destaque">Ver Mensagens</button>
+            </a>
+        <?php else: ?>
+            <p style="color: var(--cinza);">Nenhuma nova mensagem de contato.</p>
+        <?php endif; ?>
     <div class="dashboardCaixas">
       <article class="caixaMenuColab">
         <h3 class="caixaMenuColabTitulo">Nova solicitação de adoção</h3>
@@ -67,8 +83,8 @@
       </section>
 
       <section>
-        <h4>Ajuda</h4>
-        <p>Central de ajuda e perguntas frequentes</p>
+        <a href="Ajuda.php"><h4>Ajuda</h4>
+        <p>Central de ajuda e perguntas frequentes</p></a>
       </section>
 
       <section>

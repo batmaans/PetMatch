@@ -132,5 +132,21 @@ function retornarColaboradores(){
     return $res;
 }
 
+
+function retornarContatos(){
+    $con = conectarBD();
+    $sql = "SELECT id, nome, email, telefone, assunto, mensagem, data_contato FROM contato ORDER BY data_contato DESC";
+    $res = mysqli_query($con, $sql);
+    return $res;
+}
+
+function contarContatosNaoLidos(){
+    $con = conectarBD();
+    $sql = "SELECT COUNT(*) as total FROM contato WHERE lido = 0";
+    $res = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($res);
+    return $row['total'];
+}
+
 ?>
 

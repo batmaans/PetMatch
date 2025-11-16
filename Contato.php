@@ -30,6 +30,23 @@
     <div class="MVV">
       <h2>Fale com a gente 💌</h2>
       <p>Quer adotar, ser voluntário ou tirar dúvidas? A PetMatch adora conversar com você! Preencha o formulário ou escolha uma das opções abaixo.</p>
+            <?php
+      // mostra mensagens de sucesso/erro
+      session_start();
+      if(isset($_SESSION['sucesso'])) {
+          echo '<div style="background: #d4edda; color: #155724; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #c3e6cb;">';
+          echo $_SESSION['sucesso'];
+          echo '</div>';
+          unset($_SESSION['sucesso']);
+      }
+      if(isset($_SESSION['erro'])) {
+          echo '<div style="background: #f8d7da; color: #721c24; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #f5c6cb;">';
+          echo $_SESSION['erro'];
+          echo '</div>';
+          unset($_SESSION['erro']);
+      }
+      ?>
+      
       <div class="janRedSenha2">
             <form class="formulario2" action="processamento.php" method="post">
                 <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
@@ -40,9 +57,9 @@
                 
                 <input type="text" id="assunto" name="assunto" placeholder="Assunto (ex: 'Quero adotar', 'Quero ser voluntário', 'Doações'.)" required>
 
-                <textarea input type="text" textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." required style="width: 100%; height: 120px; padding: 12px 14px; border: 1px solid #ddd; border-radius: 10px; font-size: 1rem; font-family: inherit;"></textarea>
                 
-                <input class="botaoEnviar" type="submit" value="CADASTRAR">
+                <input class="botaoEnviar" type="submit" value="ENVIAR MENSAGEM">
             </form>
       </div>
       
@@ -65,8 +82,8 @@
       </section>
 
       <section>
-        <h4>Ajuda</h4>
-        <p>Central de ajuda e perguntas frequentes</p>
+        <a href="Ajuda.php"><h4>Ajuda</h4>
+        <p>Central de ajuda e perguntas frequentes</p></a>
       </section>
 
       <section>

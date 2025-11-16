@@ -1,12 +1,12 @@
 <?php
-    require_once "funcoesBD.php"; 
+require_once "funcoesBD.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Colaborador | PetMatch</title>
+  <title>Gerenciar Contatos | PetMatch</title>
 
   <link rel="stylesheet" href="style.css" />
   <script defer src="adote.js"></script>
@@ -29,49 +29,39 @@
     </ul>
   </nav>
 
-    <nav class="menu-colaborador">
-      <ul>
-        <li><a href="ColabAreaColaborador.php">Dashboard</a></li>
-        <li><a href="#" class="ativo">Gerenciar Dados</a></li>
-        <li><a href="ColabSolicitacoes.php">Solicitações de Adoção</a></li>
-        <li><a href="ColabRelatorios.php">Relatórios</a></li>
-      </ul>
+  <nav class="menu-colaborador">
+    <ul>
+      <li><a href="ColabAreaColaborador.php">Dashboard</a></li>
+      <li><a href="ColabGerenciar.php" class="ativo">Gerenciar Dados</a></li>
+      <li><a href="ColabSolicitacoes.php">Solicitações de Adoção</a></li>
+      <li><a href="ColabRelatorios.php">Relatórios</a></li>
+    </ul>
   </nav>
 
-
-    <section class="GerenciarPets">
-    <h2 class="corsecTitulo">Gerenciar Clientes</h2><br>
+  <section class="GerenciarPets">
+    <h2 class="corsecTitulo">Mensagens de Contato</h2>
     
-        <h3 class="caixaMenuColabTitulo">Ver Clientes</h3>
-        
-        <div class="cards-container">
+    <div class="cards-container">
         <?php
-        require_once "funcoesBD.php";
-
-        $listaCliente = retornarCliente();
-        if($listaCliente && mysqli_num_rows($listaCliente) > 0){
-<<<<<<< HEAD
-        while($cliente = mysqli_fetch_assoc($listaCliente)){
-=======
-            while($cliente = mysqli_fetch_assoc($listaCliente)){
->>>>>>> 02d1bd809bc7e709486793c9d7010c3314a1a22e
+        $listaContatos = retornarContatos();
+        if($listaContatos && mysqli_num_rows($listaContatos) > 0){
+            while($contato = mysqli_fetch_assoc($listaContatos)){
                 echo "<section class='cliente-card'>";
-                echo "<h2>" . htmlspecialchars($cliente["nome"] . " " . $cliente["sobrenome"]) . "</h2>";
-                echo "<p><strong>CPF:</strong> " . htmlspecialchars($cliente["cpf"]) . "</p>";
-                echo "<p><strong>Data Nascimento:</strong> " . htmlspecialchars($cliente["dataNascimento"]) . "</p>";
-                echo "<p><strong>Telefone:</strong> " . htmlspecialchars($cliente["telefone"]) . "</p>";
-                echo "<p><strong>E-mail:</strong> " . htmlspecialchars($cliente["email"]) . "</p>";
+                echo "<h2>" . htmlspecialchars($contato["assunto"]) . "</h2>";
+                echo "<p><strong>De:</strong> " . htmlspecialchars($contato["nome"]) . "</p>";
+                echo "<p><strong>Email:</strong> " . htmlspecialchars($contato["email"]) . "</p>";
+                echo "<p><strong>Telefone:</strong> " . htmlspecialchars($contato["telefone"] ?: 'Não informado') . "</p>";
+                echo "<p><strong>Mensagem:</strong> " . nl2br(htmlspecialchars($contato["mensagem"])) . "</p>";
+                echo "<p><strong>Data:</strong> " . htmlspecialchars($contato["data_contato"]) . "</p>";
                 echo "</section>";
             }
-            mysqli_free_result($listaCliente);
+            mysqli_free_result($listaContatos);
         } else {
-            echo "<p>Nenhum cliente encontrado.</p>";
+            echo "<p>Nenhuma mensagem de contato encontrada.</p>";
         }
         ?>
     </div>
-    
   </section>
-
 
   <footer>
     <section class="rodapes">
