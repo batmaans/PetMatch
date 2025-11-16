@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PetMatch - Redefinir senha</title>
+  <title>PetMatch - Nova Senha</title>
 
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
@@ -16,9 +16,10 @@
   </header>
     <img class ="fundoDivertido" src="img/fundoDivertido2.png" alt="pets diversos" style="height: 66%;">
       <div class="janRedSenha">
-          <h2 class="titulo">Redefina sua senha</h2>
-          <p class="espacamentoLeve">Digite seu e-mail abaixo para receber as instruções de recuperação de senha.</p>
-            <?php
+          <h2 class="titulo">Criar Nova Senha</h2>
+          <p class="espacamentoLeve">Digite sua nova senha abaixo.</p>
+
+          <?php
           session_start();
           if(isset($_SESSION['erro'])) {
               echo '<div style="background: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; margin-bottom: 15px; text-align: center;">';
@@ -26,21 +27,28 @@
               echo '</div>';
               unset($_SESSION['erro']);
           }
-          if(isset($_SESSION['sucesso'])) {
-              echo '<div style="background: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-bottom: 15px; text-align: center;">';
-              echo $_SESSION['sucesso'];
-              if(isset($_SESSION['token_gerado'])) {
-                  echo '<br><br><strong>Token para teste:</strong> ' . $_SESSION['token_gerado'];
-                  echo '<br><small><a href="novaSenha.php?token=' . $_SESSION['token_gerado'] . '">Clique aqui para redefinir a senha</a></small>';
-                  unset($_SESSION['token_gerado']);
-              }
-              echo '</div>';
-              unset($_SESSION['sucesso']);
-          }
           ?>
-            <p class="espacamentoLeve">Você receberá um link de recuperação de senha.</p>
-              </form>
-                  <p class= "espacamentoLeve" style="text-align: center; color: rgb(185, 185, 185);">Novo no PetMach? <a style="color: #BE5108;" href="CadastrarCliente.php">Cadastrar</a></p>
+
+          <?php if(isset($_GET['token'])): ?>
+          <form class="formulario" action="processamento.php" method="post">
+              <input type="hidden" name="acao" value="redefinir_senha">
+              <input type="hidden" name="token" value="<?php echo htmlspecialchars($_GET['token']); ?>">
+              
+              <input type="password" name="nova_senha" placeholder="Nova Senha" required minlength="6">
+              <input type="password" name="confirmar_senha" placeholder="Confirmar Nova Senha" required minlength="6">
+              
+              <button type="submit" class="botaoEnviar" style="font-size: 18px;">REDEFINIR SENHA</button>
+          </form>
+          <?php else: ?>
+          <div style="text-align: center; color: var(--vermelho);">
+              <p>Token não encontrado ou inválido!</p>
+              <p><a href="RedefinirSenha.php">Solicitar novo token</a></p>
+          </div>
+          <?php endif; ?>
+          
+          <p class= "espacamentoLeve" style="text-align: center; color: rgb(185, 185, 185);">
+              <a style="color: #BE5108;" href="login.php">Voltar para o login</a>
+          </p>
       </div>
 
   <footer>

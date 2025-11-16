@@ -17,11 +17,24 @@
     <img class ="fundoDivertido" src="img/fundoDivertido2.png" alt="pets diversos">
       <div class="janRedSenha">
           <h2 class="titulo">Login</h2>
-              <form class="formulario">
-                  <input type="email" id="email" name="email" placeholder="Email" required>
-                  <input type="password" name="password" placeholder="Senha" required>
-                  <button type="submit" class="botaoEnviar"><h2><a class="textoBranco" href="index.php">ENTRE</a></button></h2>
-              </form>
+            <?php
+              session_start();
+              if(isset($_SESSION['erro'])) {
+                  echo '<div style="background: #f8d7da; color: #721c24; padding: 15px; border-radius: 5px; margin-bottom: 15px; text-align: center;">';
+                  echo '❌ ' . $_SESSION['erro'];
+                  echo '<br><small><a href="debug_login.php" style="color: #721c24;">Clique aqui para diagnosticar o problema</a></small>';
+                  echo '</div>';
+                  unset($_SESSION['erro']);
+              }
+            ?>
+          
+          <form class="formulario" action="processamento.php" method="post">
+              <input type="hidden" name="acao" value="login_cliente">
+              <input type="text" id="email" name="email" placeholder="Email ou usuario" required>
+              <input type="password" name="senha" placeholder="Senha" required>
+              <button type="submit" class="botaoEnviar">ENTRAR</button>
+          </form>
+          
           <nav>
               <div class="esqueciMeta">
                   <a href="RedefinirSenha.php">Esqueci minha senha</a>

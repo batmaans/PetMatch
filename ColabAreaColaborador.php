@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['logado_colaborador']) || !$_SESSION['logado_colaborador']){
+    header('location: loginColaborador.php');
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
