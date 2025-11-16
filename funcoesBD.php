@@ -71,7 +71,7 @@ function inserirDoador($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $ema
 /* --- Funções de leitura --- */
 function retornarCliente(){
     $con = conectarBD();
-    $sql = "SELECT id, nome, sobrenome, cpf, dataNascimento, telefone, email FROM cadastroclientes ORDER BY nome";
+    $sql = "SELECT nome, sobrenome, cpf, dataNascimento, telefone, email FROM cadastroclientes ORDER BY nome";
     $res = mysqli_query($con, $sql);
     return $res;
 }
@@ -113,21 +113,21 @@ function inserirDoadores($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $e
 /* --- Funções de leitura adicionais --- */
 function retornarPets(){
     $con = conectarBD();
-    $sql = "SELECT id, nome, dataNascimento, idade, raca, cor FROM cadastroanimais ORDER BY nome";
+    $sql = "SELECT nome, dataNascimento, idade, raca, cor FROM cadastroanimais ORDER BY nome";
     $res = mysqli_query($con, $sql);
     return $res;
 }
 
 function retornarDoadores(){
     $con = conectarBD();
-    $sql = "SELECT id, nome, sobrenome, cpf, dataNascimento, telefone, email, quantidadedeanimais, motivodedoacao, datadoacao FROM cadastrodoadores ORDER BY nome";
+    $sql = "SELECT nome, sobrenome, cpf, dataNascimento, telefone, email, quantidadedeanimais, motivodedoacao, datadoacao FROM cadastrodoadores ORDER BY nome";
     $res = mysqli_query($con, $sql);
     return $res;
 }
 
 function retornarColaboradores(){
     $con = conectarBD();
-    $sql = "SELECT id, nome, sobrenome, cpf, dataNascimento, telefone, email, cargo, salario FROM cadastrocolaboradores ORDER BY nome";
+    $sql = "SELECT nome, sobrenome, cpf, dataNascimento, telefone, email, cargo, salario FROM cadastrocolaboradores ORDER BY nome";
     $res = mysqli_query($con, $sql);
     return $res;
 }

@@ -50,7 +50,7 @@
 
         $listaCliente = retornarCliente();
         if($listaCliente && mysqli_num_rows($listaCliente) > 0){
-            while($cliente = mysqli_fetch_assoc($cliente)){
+        while($cliente = mysqli_fetch_assoc($listaCliente)){
                 echo "<section class='cliente-card'>";
                 echo "<h2>" . htmlspecialchars($cliente["nome"] . " " . $cliente["sobrenome"]) . "</h2>";
                 echo "<p><strong>CPF:</strong> " . htmlspecialchars($cliente["cpf"]) . "</p>";
