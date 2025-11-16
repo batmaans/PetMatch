@@ -36,7 +36,7 @@
   </nav>
 
   <section class="Dashboard">
-    <h2 class="corsecTitulo">Veja as principais notificações:</h2><br>
+    <h2 class="corsecTitulo">Veja as principais notificações:</h2>
     <?php
     require_once "funcoesBD.php";
     $totalContatos = contarContatosNaoLidos();
