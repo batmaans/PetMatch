@@ -52,8 +52,8 @@
       </section>
 
       <section>
-        <h4>Ajuda</h4>
-        <p>Central de ajuda e perguntas frequentes</p>
+        <a href="Ajuda.php"><h4>Ajuda</h4>
+        <p>Central de ajuda e perguntas frequentes</p></a>
       </section>
 
       <section>
