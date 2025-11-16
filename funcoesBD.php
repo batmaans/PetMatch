@@ -132,16 +132,6 @@ function retornarColaboradores(){
     return $res;
 }
 
-function inserirContato($nome, $email, $telefone, $assunto, $mensagem){
-    $con = conectarBD();
-    $sql = "INSERT INTO contato (nome, email, telefone, assunto, mensagem) VALUES (?, ?, ?, ?, ?)";
-    $stmt = mysqli_prepare($con, $sql);
-    mysqli_stmt_bind_param($stmt, "sssss", $nome, $email, $telefone, $assunto, $mensagem);
-    $ok = mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    mysqli_close($con);
-    return $ok;
-}
 
 function retornarContatos(){
     $con = conectarBD();
