@@ -114,7 +114,23 @@ die();
 
 }
 
+if(!empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['assunto']) && !empty($_POST['mensagem'])){
+    
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'] ?? ''; // opcional
+    $assunto = $_POST['assunto'];
+    $mensagem = $_POST['mensagem'];
 
+    if(inserirContato($nome, $email, $telefone, $assunto, $mensagem)){
+        $_SESSION['sucesso'] = "Mensagem enviada com sucesso! Entraremos em contato em breve.";
+    } else {
+        $_SESSION['erro'] = "Erro ao enviar mensagem. Tente novamente.";
+    }
+    
+    header('location:Contato.php');
+    die();
+}
 
 
 
