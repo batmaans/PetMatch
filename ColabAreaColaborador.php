@@ -53,6 +53,7 @@
         <?php else: ?>
             <p style="color: var(--cinza);">Nenhuma nova mensagem de contato.</p>
         <?php endif; ?>
+    </div>
     <div class="dashboardCaixas">
       <article class="caixaMenuColab">
         <h3 class="caixaMenuColabTitulo">Nova solicitação de adoção</h3>
